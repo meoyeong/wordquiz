@@ -42,58 +42,85 @@ class _MyHomePageState extends State<MyHomePage>
       (
         child:Column(mainAxisAlignment: MainAxisAlignment.center, children:
         [
+          Text("단어장앱",
+              style: TextStyle(fontSize: 35, color:Colors.purple)),
+          SizedBox(height: 60.0),
           ElevatedButton
             (
-            child: Text("영어 단어장 보기"),
             onPressed: ()
-            {
-              Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
-                    (
-                      builder: (_) => seeWord()
-                    )
-                );
-            },
-            ),
-           ElevatedButton
-            (
-            child: Text("퀴즈풀기"),
-            onPressed: ()
-            {
-              Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
-                    (
-                      builder: (_) => quiz()
-                  )
+            { Navigator.push
+              (
+                context,
+                MaterialPageRoute
+                  (
+                    builder: (_) => seeWord()
+                )
               );
             },
-          ),
+              child: Text
+                (
+                  "단어장 보기",
+                  style: TextStyle(fontSize: 35, color:Colors.purple)
+                ),
+              style: TextButton.styleFrom(
+                  primary: Colors.purple,
+                  minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
+                  onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+              ),
+            ),
+          SizedBox(height: 60.0),
           ElevatedButton
-          (
-            child: Text("오답확인"),
-            onPressed: ()
-              {
-                Navigator.push
-                  (
-                    context,
-                    MaterialPageRoute
-                      (
-                      builder: (_) => wrongWord()
-                      )
-                );
-              },
-          ),
-            ElevatedButton.icon
             (
             onPressed: ()
-            { },
-              icon: Icon(Icons.add, size: 18),
-              label: Text("CONTAINED BUTTON"),
-            )
+            { Navigator.push
+              (
+                context,
+                MaterialPageRoute
+                  (
+                    builder: (_) => quiz()
+                )
+            );
+            },
+
+            child: Text
+              (
+                "퀴즈 풀기",
+                style: TextStyle(fontSize: 35, color:Colors.purple)
+            ),
+            style: TextButton.styleFrom
+              (
+                primary: Colors.purple,
+                minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
+                onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+            ),
+          ),
+          SizedBox(height: 60.0),
+          ElevatedButton
+            (
+            onPressed: ()
+            { Navigator.push
+              (
+                context,
+                MaterialPageRoute
+                  (
+                    builder: (_) => wrongWord()
+                )
+            );
+            },
+
+            child: Text
+              (
+                "오답 확인"
+                ,
+                style: TextStyle(fontSize: 35, color:Colors.purple)
+            ),
+            style: TextButton.styleFrom
+              (
+                primary: Colors.purple,
+                minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
+                onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+            ),
+          ),
         ]
       ),
 
