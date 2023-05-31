@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordquiz/selectChapter.dart';
 
-class seeWord extends StatelessWidget {
+class selectChapter extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
@@ -26,7 +25,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
 {
-
   @override
   Widget build(BuildContext context)
   {
@@ -37,24 +35,17 @@ class _MyHomePageState extends State<MyHomePage>
           child:Column(mainAxisAlignment: MainAxisAlignment.center, children:
           [
             Text(
-                "토익 단어장 보기",
+                "챕터 선택",
                 style: TextStyle(fontSize: 35, color:Colors.purple)),
             SizedBox(height: 60.0),
             ElevatedButton
               (
               onPressed: ()
-              { Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
-                    (
-                      builder: (_) => selectChapter()
-                  )
-              );
+              {
               },
               child: Text
                 (
-                  "챕터 선택",
+                  "명사",
                   style: TextStyle(fontSize: 35, color:Colors.purple)
               ),
               style: TextButton.styleFrom(
@@ -63,8 +54,41 @@ class _MyHomePageState extends State<MyHomePage>
                   disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
               ),
             ),
-            SizedBox(height: 60.0),
-            SizedBox(height: 60.0),
+            SizedBox(height: 10.0),
+            ElevatedButton
+              (
+              onPressed: ()
+              {
+              },
+              child: Text
+                (
+                  "형용사",
+                  style: TextStyle(fontSize: 35, color:Colors.purple)
+              ),
+              style: TextButton.styleFrom(
+                  foregroundColor: Colors.purple,
+                  minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
+                  disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+              ),
+            ),
+            SizedBox(height: 10.0),
+            ElevatedButton
+              (
+              onPressed: ()
+              {
+              },
+              child: Text
+                (
+                  "부사",
+                  style: TextStyle(fontSize: 35, color:Colors.purple)
+              ),
+              style: TextButton.styleFrom(
+                  foregroundColor: Colors.purple,
+                  minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
+                  disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+              ),
+            ),
+            SizedBox(height: 10.0),
             ElevatedButton
               (
               onPressed: ()
@@ -73,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage>
 
               child: Text
                 (
-                  "전에 보던 챕터"
+                  "동사"
                   ,
                   style: TextStyle(fontSize: 35, color:Colors.purple)
               ),
