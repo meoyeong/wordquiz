@@ -63,9 +63,9 @@ class _MyHomePageState extends State<MyHomePage>
                   style: TextStyle(fontSize: 35, color:Colors.purple)
                 ),
               style: TextButton.styleFrom(
-                  primary: Colors.purple,
+                  foregroundColor: Colors.purple,
                   minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
-                  onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+                  disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
               ),
             ),
           SizedBox(height: 60.0),
@@ -89,9 +89,9 @@ class _MyHomePageState extends State<MyHomePage>
             ),
             style: TextButton.styleFrom
               (
-                primary: Colors.purple,
+                foregroundColor: Colors.purple,
                 minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
-                onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+                disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
             ),
           ),
           SizedBox(height: 60.0),
@@ -116,9 +116,9 @@ class _MyHomePageState extends State<MyHomePage>
             ),
             style: TextButton.styleFrom
               (
-                primary: Colors.purple,
+                foregroundColor: Colors.purple,
                 minimumSize: Size(300, 100),   // 버튼의 크기 조절하는 속성
-                onSurface : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
+                disabledForegroundColor : Colors.lightGreen // 비활성화된 버튼 색도 바꿀 수 있다.
             ),
           ),
         ]
