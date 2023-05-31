@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 class seeWord extends StatelessWidget {
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar
-    (
-        title: Text("단어장 보기 페이지"),
-
-    )
+    return MaterialApp(
+      title: '영어 단어장 앱',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: '영어 단어장 메인'),
     );
   }
 }
@@ -31,7 +34,8 @@ class _MyHomePageState extends State<MyHomePage>
           (
           child:Column(mainAxisAlignment: MainAxisAlignment.center, children:
           [
-            Text("단어장앱",
+            Text(
+                "챕터 선택",
                 style: TextStyle(fontSize: 35, color:Colors.purple)),
             SizedBox(height: 60.0),
             ElevatedButton
@@ -48,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage>
               },
               child: Text
                 (
-                  "단어장 보기",
+                  "단어 ",
                   style: TextStyle(fontSize: 35, color:Colors.purple)
               ),
               style: TextButton.styleFrom(
